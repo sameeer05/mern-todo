@@ -18,7 +18,7 @@ function App() {
 	}
 
 	const completeTodo = async id => {
-		const data = await fetch(api_base + '/todos/complete' + id).then(res => res.json());
+		const data = await fetch(api_base + '/todos/complete/' + id).then(res => res.json());
 
 		setTodos(todos => todos.map(todo => {
 			if (todo._id === data._id) {
